@@ -90,7 +90,7 @@ header h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    width: calc(33.33% - 20px);
+    width: 450px;
     cursor: pointer;
 }
 
