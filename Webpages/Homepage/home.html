@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Booking</title>
+    <link rel="stylesheet" href="hostel.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Hostel Booking</h1>
+            <br>
+            <br>
+            <nav>
+                <ul>
+                    <li><a href="hostel.html">Home</a></li>
+                    <li><a href="../About/about.html">About</a></li>
+                    <li><a href="../Aontact/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Filter icon -->
+        <div class="filter-icon" onclick="toggleFilters()">
+            <img src="filter-icon.png" alt="Filter Icon" id="filterIcon">
+        </div>
+    </header>
+
+    <!-- Filter options -->
+    <!-- Filter options -->
+<div class="filter-options" id="filterOptions">
+    <table>
+        <tr>
+            <th colspan="2">Filter Options</th>
+        </tr>
+        <tr>
+            <td>Price Range:</td>
+            <td>
+                <input type="range" min="0" max="100" value="50" class="slider" id="priceRange">
+                <span id="priceValue">$50</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Distance:</td>
+            <td>
+                <input type="range" min="0" max="10" value="5" class="slider" id="distanceRange">
+                <span id="distanceValue">5 km</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Category:</td>
+            <td>
+                <label><input type="checkbox" id="categoryGirls"> Girls</label><br>
+                <label><input type="checkbox" id="categoryBoys"> Boys</label><br>
+                <label><input type="checkbox" id="categoryBoth"> Both</label>
+            </td>
+        </tr>
+    </table>
+    <div class="button-container">
+        <button onclick="applyFilters()">Apply</button>
+        <button onclick="resetFilters()">Reset</button>
+    </div>
+</div>
+
+
+    <main>
+        <!-- Hostel list section -->
+        <section id="home">
+            <div class="hostel-list">
+                <!-- Hostel boxes -->
+                <div class="hostel" onclick="showHostelDetails('Hostel A')">
+                    <img src="hostel-a.jpg" alt="Hostel A Image">
+                    <h3>Hostel A</h3>
+                    <p>Category: Girls</p>
+                    <p>Price: ₹3000 per month</p>
+                    <p>Distance: 1 km</p>
+                </div>
+                <div class="hostel" onclick="showHostelDetails('Hostel B')">
+                    <img src="hostel-b.jpg" alt="Hostel B Image">
+                    <h3>Hostel B</h3>
+                    <p>Category: Boys</p>
+                    <p>Price: ₹2500 per month</p>
+                    <p>Distance: 3 km</p>
+                </div>
+                <!-- more hostels here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Hostel Booking. All rights reserved.</p>
+        </div>
+    </footer> -->
+
+    <script src="hostel.js"></script>
+</body>
+</html>
