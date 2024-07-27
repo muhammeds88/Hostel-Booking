@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hostel Details</title>
-    <link rel="stylesheet" href="hostel.css">
+    <link rel="stylesheet" href="../Homepage/hostel.css">
 </head>
 <body>
     <header>
@@ -12,9 +12,9 @@
             <h1>Hostel Booking</h1>
             <nav>
                 <ul>
-                    <li><a href="hostel.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="../About/about.html">About</a></li>
+                    <li><a href="../Contact/contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,17 +30,17 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Hostel Booking. All rights reserved.</p>
+        <div class="footer-content">
+            <p>© 2023 Hostel Booking. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="hostel.js"></script>
+    <script src="../Homepage/hostel.js"></script>
     <script>
-        // Function to fetch and display hostel details
         document.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
             const hostelName = urlParams.get('hostel');
-            
-            // Example: fetch hostel details based on hostelName
+
             const hostelDetailsContent = document.getElementById('hostel-details-content');
             hostelDetailsContent.innerHTML = `
                 <h3>${hostelName}</h3>
@@ -49,49 +49,39 @@
                 <p>Price: ${getHostelPrice(hostelName)}</p>
                 <p>Distance: ${getHostelDistance(hostelName)} km</p>
                 <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ligula.</p>
-                <!-- Add more details as needed -->
             `;
         });
 
-        // Example functions to retrieve hostel details (replace with actual data retrieval logic)
         function getHostelImage(hostelName) {
-            // Replace with actual image URLs or logic to fetch images
             if (hostelName === 'Hostel A') {
                 return 'hostel-a.jpg';
             } else if (hostelName === 'Hostel B') {
                 return 'hostel-b.jpg';
             }
-            // Add more cases for other hostels
         }
 
         function getHostelCategory(hostelName) {
-            // Replace with actual category logic
             if (hostelName === 'Hostel A') {
                 return 'Girls';
             } else if (hostelName === 'Hostel B') {
                 return 'Boys';
             }
-            // Add more cases for other hostels
         }
 
         function getHostelPrice(hostelName) {
-            // Replace with actual price logic
             if (hostelName === 'Hostel A') {
-                return '$30 per night';
+                return '₹3000 per month';
             } else if (hostelName === 'Hostel B') {
-                return '$25 per night';
+                return '₹2500 per month';
             }
-            // Add more cases for other hostels
         }
 
         function getHostelDistance(hostelName) {
-            // Replace with actual distance logic
             if (hostelName === 'Hostel A') {
                 return '1';
             } else if (hostelName === 'Hostel B') {
                 return '3';
             }
-            // Add more cases for other hostels
         }
     </script>
 </body>
