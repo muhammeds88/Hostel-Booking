@@ -2,7 +2,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgb(230, 232, 235);
     border: 1px solid #ccc;
     border-radius: 8px;
 }
@@ -10,7 +10,7 @@
 .about-content h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #3f51b5;
+    color:  rgb(46, 45, 45);
 }
 
 .about-content p {
@@ -20,7 +20,7 @@
 }
 
 .about-content a {
-    color: #3f51b5;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
