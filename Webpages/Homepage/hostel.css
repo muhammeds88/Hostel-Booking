@@ -18,17 +18,32 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
-header h1 {
+/* Navbar container styling */
+.navbar {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
     margin: 0;
+    font-size: 1.8em; /* Adjust the size as needed */
+}
+
+.navbar nav {
+    flex: 1;
+    text-align: center;
 }
 
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 .navbar ul li {
@@ -42,14 +57,16 @@ header h1 {
 }
 
 .navbar ul li a:hover {
-    text-decoration: underline;
+    text-decoration-color: #666;
 }
 
 .filter-icon {
     cursor: pointer;
-    margin-right: 20px; 
+    font-size: 1.5em;
+    margin-left: 20px; 
 }
 
+/* Filter options styling */
 .filter-options {
     display: none;
     background-color: #fff;
@@ -129,7 +146,7 @@ header h1 {
 }
 
 footer {
-    background-color:  rgb(66, 66, 66);
+    background-color: rgb(66, 66, 66);
     color: #fff;
     text-align: center;
     padding: 10px 0;
